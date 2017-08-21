@@ -13,6 +13,9 @@ namespace FingerPrintAuthentication.iOS.Screens.FingerPrint
 	partial class FingerPrintViewController
 	{
 		[Outlet]
+		UIKit.UIButton authenButton { get; set; }
+
+		[Outlet]
 		UIKit.UIButton authenticationButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -20,6 +23,11 @@ namespace FingerPrintAuthentication.iOS.Screens.FingerPrint
 			if (authenticationButton != null) {
 				authenticationButton.Dispose ();
 				authenticationButton = null;
+			}
+
+			if (authenButton != null) {
+				authenButton.Dispose ();
+				authenButton = null;
 			}
 		}
 	}
