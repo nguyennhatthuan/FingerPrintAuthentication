@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using Acr.UserDialogs;
+using FingerPrintAuthentication.iOS.Screens.FingerPrint;
+using Foundation;
 using UIKit;
 
 namespace FingerPrintAuthentication.iOS
@@ -20,6 +22,8 @@ namespace FingerPrintAuthentication.iOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+
+            Window.RootViewController = new FingerPrintViewController();
 
             return true;
         }
