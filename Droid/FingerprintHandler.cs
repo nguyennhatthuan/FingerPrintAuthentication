@@ -8,7 +8,7 @@ using Android.Widget;
 
 namespace FingerPrintAuthentication.Droid
 {
-	internal class FingerprintHandler : FingerprintManager.AuthenticationCallback
+	class FingerprintHandler : FingerprintManager.AuthenticationCallback
 	{
 		private Context mainActivity;
 
@@ -23,7 +23,6 @@ namespace FingerPrintAuthentication.Droid
 			if (Android.Support.V4.Content.ContextCompat.CheckSelfPermission(mainActivity, Manifest.Permission.UseFingerprint) != (int)Android.Content.PM.Permission.Granted)
 				return;
 			fingerprintManager.Authenticate(cryptoObject, cenCancellationSignal, 0, this, null);
-
 		}
 
 		public override void OnAuthenticationFailed()

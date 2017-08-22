@@ -66,7 +66,7 @@ namespace FingerPrintAuthentication.Droid
 					+ "/"
 					+ KeyProperties.EncryptionPaddingPkcs7);
 				keyStore.Load(null);
-				IKey key = (IKey)keyStore.GetKey(KEY_NAME, null);
+				IKey key = keyStore.GetKey(KEY_NAME, null);
 				cipher.Init(CipherMode.EncryptMode, key);
 				return true;
 			}
